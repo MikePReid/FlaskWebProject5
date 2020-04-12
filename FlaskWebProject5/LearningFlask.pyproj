@@ -39,6 +39,9 @@
     <Content Include="HelloFlask\static\site.css" />
     <Content Include="HelloFlask\static\data.json" />
     <Content Include="HelloFlask\templates\index.html" />
+    <Content Include="HelloFlask\templates\about.html" />
+    <Content Include="HelloFlask\templates\BlockChain.html" />
+    <Content Include="HelloFlask\templates\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

@@ -18,3 +18,16 @@ def home():
 def get_data():
   return app.send_static_file('data.json')
 
+@app.route('/about')
+def about():
+    return render_template(
+        "about.html",
+        title = "About HelloFlask",
+        content = "Example app page for Flask.")
+
+@app.route('/BlockChain')
+def BlockChain():
+    return render_template(
+        "BlockChain.html",
+        title = "BlockChain HelloFlask",
+        content = "Example BlockChain app page for Flask.")
