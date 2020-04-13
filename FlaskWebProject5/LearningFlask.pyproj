@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HelloFlask\Blockchain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="HelloFlask\views.py">
       <SubType>Code</SubType>
