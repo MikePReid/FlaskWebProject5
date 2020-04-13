@@ -3,7 +3,7 @@ import json
 from time import time
 from uuid import uuid4
 
-class Blockchain(object):
+class BlockChain(object):
     def __init__(self):
         self.current_transactions = []
         self.chain = []

@@ -1,10 +1,7 @@
 from datetime import datetime
-from flask import render_template
+from flask import render_template, jsonify
 from HelloFlask import app
-# from Blockchain import Blockchain
-
-# Instantiate the Blockchain
-# blockchain = Blockchain()
+import json
 
 @app.route('/')
 @app.route('/home')
@@ -29,6 +26,32 @@ def mine():
         title = "Block Chain - Mine",
         content = "We'll mine a new Block")
 
+
+@app.route('/transactions/new', methods=['GET'])  #<-- Change to POST
+def new_transaction():
+    return render_template(
+        "BlockChain.html",
+        title = "Block Chain - New Transaction",
+        content = "We'll add a new transaction")
+
+@app.route('/chain', methods=['GET'])
+def full_chain():
+    print(jsonify({
+            'chain': blockchain.chain,
+            'length': len(blockchain.chain)
+            })
+          )
+#    response = {
+#        'chain': blockchain.chain,
+#        'length': len(blockchain.chain),
+#        }
+    return render_template(
+        "BlockChain.html",
+        title = "Block Chain - The Chain",
+        content = jsonify({
+            'chain': blockchain.chain,
+            'length': len(blockchain.chain),
+        }))
 
 @app.route('/about')
 def about():

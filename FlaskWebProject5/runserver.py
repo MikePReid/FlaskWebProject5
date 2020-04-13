@@ -1,6 +1,11 @@
 import os
 from HelloFlask import app    # Imports the code from HelloFlask/__init__.py
 
+#from HelloFlask import Blockchain
+
+# Instantiate the Blockchain
+# blockchain = Blockchain()
+
 if __name__ == '__main__':
     import os
     HOST = os.environ.get('SERVER_HOST', 'localhost')
