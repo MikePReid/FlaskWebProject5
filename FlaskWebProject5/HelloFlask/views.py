@@ -2,6 +2,10 @@ from datetime import datetime
 from flask import render_template, jsonify
 from HelloFlask import app
 import json
+from HelloFlask.models import BlockChain
+
+# Instantiate the Blockchain
+blockchain = BlockChain()
 
 @app.route('/')
 @app.route('/home')

@@ -95,3 +95,4 @@ class BlockChain(object):
         # Returns the last Block in the chain
         return self.chain[-1]
 
+
